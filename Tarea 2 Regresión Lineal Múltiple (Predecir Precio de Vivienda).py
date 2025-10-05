@@ -35,7 +35,6 @@ print("Impacto de cada característica (coeficientes):")
 for feature, coef in b_coefs.items():
     print(f"{feature}: {coef:.1f} UF por unidad")
 
-
 #Evaluación del modelo en el set completo
 predicciones = modelo_lineal.predict(X)
 
@@ -54,4 +53,5 @@ r2 = r2_score(Y, predicciones)
 print("\n--- Métrica clave de desempeño (evaluación en set de entrenamiento) ---")
 print(f"Raíz del error cuadrático medio (RMSE): {rmse:.1f} UF")
 print(f"En promedio, el modelo se equivoca en {rmse:.1f} UF en la predicción.")
+
 print(f"Coeficiente de determinación (R^2): {r2:.1f} (idealmente cerca de 1.0)")
